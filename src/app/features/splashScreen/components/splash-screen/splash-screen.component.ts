@@ -23,18 +23,18 @@ export class SplashScreenComponent
     ionViewDidEnter()
     {
       if(!this.utilsService.splashScreenHasShown)
-      {
-        this.platform.ready().then(() => 
         {
-          this.utilsService.splashScreenHasShown = true;
-          SplashScreen.hide().then(()=>
+          this.platform.ready().then(() => 
           {
-            setTimeout(() => 
+            this.utilsService.splashScreenHasShown = true;
+            SplashScreen.hide().then(()=>
             {
-              this.utilsService.changeRoute('/auth')
-            }, 3000);
-          })
-        });
-      }
+              setTimeout(() => 
+              {
+                this.utilsService.changeRoute('/auth')
+              }, 3000);
+            })
+          });
+        }
     }  
 }
