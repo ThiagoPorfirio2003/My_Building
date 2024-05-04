@@ -10,14 +10,14 @@ import { UtilsService } from 'src/app/core/services/utils.service';
 })
 export class SplashScreenComponent
 {
-  public myNameH1class: string;
-  public myDivisionH1class : string
+  public headerClass : string;
+  public footerClass : string;
 
   constructor(private utilsService : UtilsService,
     private platform : Platform)
     {
-      this.myNameH1class = 'tracking-in-contract-bck-top'
-      this.myDivisionH1class = 'tracking-in-contract-bck-bottom'
+      this.headerClass = 'slide-out-right'
+      this.footerClass = 'slide-out-left'
     }
 
     ionViewDidEnter()
@@ -29,9 +29,16 @@ export class SplashScreenComponent
             this.utilsService.splashScreenHasShown = true;
             SplashScreen.hide().then(()=>
             {
+              setTimeout(()=>
+              {
+                this.headerClass = 'slide-in-left'
+                this.footerClass = 'slide-in-right'
+
+              },1600)
+
               setTimeout(() => 
               {
-              //  this.utilsService.changeRoute('/auth')
+                 this.utilsService.changeRoute('/auth')
               }, 3000);
             })
           });

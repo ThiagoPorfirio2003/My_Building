@@ -1,14 +1,14 @@
 <ion-content [fullscreen]="true">
   <section class="splashScreen">
-    <header>
-      <h1 class="primaryColor">Thiago</h1><h1 class="secondaryColor"> Porfirio</h1>
+    <header [ngClass]="this.headerClass">
+      <h1 class="primaryColor ">Thiago</h1><h1 class="secondaryColor"> Porfirio</h1>
     </header>
 
-    <section class="imgI">
+    <section class="imgI vibrate-3">
       <img src="../../../../../assets/splash/MyBuilding_NoBack.png">
     </section>
     
-    <footer class="fade-in">
+    <footer [ngClass]="this.footerClass">
       <h2 class="secondaryColor">4to</h2><h2 class="primaryColor"> A</h2>
     </footer>
   </section>
