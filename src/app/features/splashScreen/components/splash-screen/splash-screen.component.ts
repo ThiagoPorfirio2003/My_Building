@@ -33,7 +33,6 @@ export class SplashScreenComponent
               {
                 this.headerClass = 'slide-in-left'
                 this.footerClass = 'slide-in-right'
-
               },1600)
 
               setTimeout(() => 
