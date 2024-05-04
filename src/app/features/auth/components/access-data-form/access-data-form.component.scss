@@ -1,17 +1,16 @@
-$principalColor: #03BB85;
-
 ion-item {
     --border-color: #000000;
     --border-width: 1px;
     --border-radius: 20px;
-    --background: #03BB85;
+    --background: var(--ion-color-primary);
     margin-bottom: 3%;
     margin-top: 10%;
 }
 
 ion-input{
-    --color:#000000;
+    --color:var(--ion-color-secondary);
     font-size: 24px;
+    font-family: var(--font-oficial);
    // --ion-margin-bottom: 50px #F2FF20;
 }
 
@@ -28,12 +27,12 @@ ion-note {
 }
 
 .iconColor{
-    color: #FAA307;
+    color: var(--ion-color-secondary);
 }
 
 .logBtn{
-    --background: #FAA307;
-    --color:#000000;
+    --background: var(--ion-color-secondary);
+    --color: var(--ion-color-primary);
     font-size: 24px;
     margin-top: 10%  ;
 }

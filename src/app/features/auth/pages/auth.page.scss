@@ -6,14 +6,23 @@ ion-content {
    // position: absolute;
 }
 
+
 .center
 {
     height: 100%; 
     width: 100%;
     display: flex; 
-    justify-content: center;
+   // justify-content: center;
     align-items: center; 
     flex-direction: column;
+}
+
+h1
+{
+    margin-top: 20%;
+    text-align: center;
+    color: var(--ion-color-primary);
+    font-size: 4rem;
 }
 
 .principalFab
