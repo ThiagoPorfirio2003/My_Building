@@ -1,0 +1,35 @@
+<form [formGroup]="this.loginForm">
+  <ion-item lines="none">
+    <ion-icon class="iconColor"  slot="start" name="mail"></ion-icon>
+
+    <ion-input formControlName="email" name="email" type="email" inputmode="email" placeholder="Email" clearInput="true"
+    (ionInput)="this.changeEmailErrorText()"></ion-input>
+  </ion-item>   
+
+  @if(this.emailErrorText !== '') 
+  {
+    <ion-note>{{this.emailErrorText}}</ion-note>
+  }
+
+  <ion-item lines="none">
+    <ion-icon class="iconColor" slot="start" name="lock-closed"></ion-icon>
+
+    <ion-input formControlName="password" name="password" inputmode="password" [type]="this.passwordInputType" placeholder="Clave" clearInput="true" clearOnEdit="false"
+    (ionInput)="this.changePasswordErrorText()"></ion-input>
+
+    
+    <ion-button size="small" (click)="this.showHidePassword()" fill="clear">
+      <ion-icon class="iconEye iconColor" slot="icon-only" [name]="this.passwordEyeName"></ion-icon>
+    </ion-button>
+  </ion-item>
+
+  @if(this.passwordErrorText !== '') 
+  {
+    <ion-note>{{this.passwordErrorText}}</ion-note>
+  }
+
+  <ion-button (click)="this.submitData()" class="logBtn" expand="block" fill="solid" shape="round" >
+    Iniciar sesión
+    <ion-icon slot="end" name="log-in"></ion-icon>
+  </ion-button>
+</form>

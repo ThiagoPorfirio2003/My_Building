@@ -1,13 +1,38 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>auth</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header [title]="'Bienvenido'"></app-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">auth</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-fab slot="fixed" vertical="top" horizontal="start">
+    <ion-fab-button class="principalFab" aria-label="Usuarios">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  
+    <ion-fab-list side="end">
+      <ion-fab-button class="fifthFab" (click)="this.changeFastAccessUserSelected(4)">
+        <ion-icon name="person-circle-outline" color="dark"></ion-icon>      
+      </ion-fab-button>
+
+      <ion-fab-button class="fourthFab" (click)="this.changeFastAccessUserSelected(3)">
+        <ion-icon name="person-circle-outline" color="dark"></ion-icon>      
+      </ion-fab-button>
+
+      <ion-fab-button class="thirdFab" (click)="this.changeFastAccessUserSelected(2)">
+        <ion-icon name="person-circle-outline" color="dark"></ion-icon>      
+      </ion-fab-button>
+  
+      <ion-fab-button class="secondFab" (click)="this.changeFastAccessUserSelected(1)">
+        <ion-icon name="person-circle-outline" color="dark"></ion-icon>      
+      </ion-fab-button>
+  
+      <ion-fab-button class="firstFab" (click)="this.changeFastAccessUserSelected(0)">
+        <ion-icon name="person-circle-outline" color="dark"></ion-icon>      
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <section class="center">
+    <img src="../../../../assets/splash/My_building.png">
+
+    <app-access-data-form [fastUser]="this.fastAccessUserSelected"></app-access-data-form>
+  </section>
+
 </ion-content>

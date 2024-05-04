@@ -31,7 +31,7 @@ export class SplashScreenComponent
             {
               setTimeout(() => 
               {
-                this.utilsService.changeRoute('/auth')
+              //  this.utilsService.changeRoute('/auth')
               }, 3000);
             })
           });

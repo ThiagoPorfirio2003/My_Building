@@ -1,0 +1,53 @@
+
+ion-content {
+    --padding-end: 5%;
+    --padding-start: 5%;
+   // --padding-top: 4%; 
+   // position: absolute;
+}
+
+.center
+{
+    height: 100%; 
+    width: 100%;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+}
+
+.principalFab
+{
+    --background: #F2FF20;
+    --color: #000000;
+}
+
+.firstFab
+{
+    --background: #D00000;
+    --color: #000000;
+}
+
+.secondFab
+{
+    --background: #FAA307;
+    --color: #000000;
+}
+
+.thirdFab
+{
+    --background: #F2FF20;
+    --color: #000000;
+}
+
+.fourthFab
+{
+    --background: #38B000;
+    --color: #000000;
+}
+
+.fifthFab
+{
+    --background: #03BB85;
+    --color: #000000;
+}
