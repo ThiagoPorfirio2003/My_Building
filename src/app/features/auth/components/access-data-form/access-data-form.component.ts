@@ -36,7 +36,7 @@ export class AccessDataFormComponent implements OnChanges
 
     this.loginForm = inject(FormBuilder).group({
       email: ['', [Validators.required, Validators.email, Validators.maxLength(60)]],
-      password: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(30)]],
+      password: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(30)]],
     })
 
     this.submitDataEventEmitter = new EventEmitter<MyForm<MyUserAccessData>>();
@@ -112,7 +112,7 @@ export class AccessDataFormComponent implements OnChanges
       {
         if(errors.minlength)
         {
-          this.passwordErrorText = 'No se alcanzaron los 10 caracteres';
+          this.passwordErrorText = 'No se alcanzaron los 6 caracteres';
         }
         else
         {

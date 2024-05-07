@@ -80,6 +80,16 @@
         --background: #024050;
     }
 
+    .alert{
+        background-color: var(--ion-color-secondary);
+        color: var(--ion-color-primary);
+    }
+
+    .toast{
+        background-color: var(--ion-color-primary);
+        color: var(--ion-color-secondary);
+    }   
+
     .primaryColor
     {
         color: var(--ion-color-primary);        
@@ -108,5 +118,26 @@
         max-width: 95%;
         max-height: 95%;
         border-radius: 15%;
+    }
+
+    .sweetTitle
+    {
+        color: var(--ion-color-primary);
+    }
+
+    .sweetConfirm
+    {
+        background-color: var(--ion-color-primary);
+        color: var(--ion-color-secondary);
+        font-size: 24px;
+        border-radius: 55%;
+    }
+
+    .sweetDeny
+    {
+        background-color: var(--ion-color-secondary);
+        color: var(--ion-color-primary);
+        font-size: 24px;
+        border-radius: 55%;
     }
 }

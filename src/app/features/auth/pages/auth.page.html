@@ -36,7 +36,7 @@
       <img class="imgIcon" src="../../../../assets/splash/MyBuilding_NoBack.png">
     </section>
 
-    <app-access-data-form [fastUser]="this.fastAccessUserSelected"></app-access-data-form>
+    <app-access-data-form (submitDataEventEmitter)="this.receiveAccessData($event)" [fastUser]="this.fastAccessUserSelected"></app-access-data-form>
   </section>
 
 </ion-content>

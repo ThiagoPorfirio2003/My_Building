@@ -9,7 +9,7 @@ export const canGoSplashGuard: CanActivateFn = (route, state) => {
 
   if(utilsService.splashScreenHasShown)
   {
-      utilsService.changeRoute('/entry');
+      utilsService.changeRoute('/auth');
   }
 
   return !utilsService.splashScreenHasShown;
