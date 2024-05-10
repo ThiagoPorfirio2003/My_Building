@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { NavigationTabsPageRoutingModule } from './navigation-tabs-routing.module';
+import { GaleryPageRoutingModule } from './galery-routing.module';
 
-import { NavigationTabsPage } from './navigation-tabs.page';
+import { GaleryPage } from './galery.page';
 import { SharedComponentsModule } from 'src/app/core/sharedComponents/shared-components.module';
 
 @NgModule({
@@ -14,8 +14,9 @@ import { SharedComponentsModule } from 'src/app/core/sharedComponents/shared-com
     CommonModule,
     FormsModule,
     IonicModule,
-    NavigationTabsPageRoutingModule  
+    GaleryPageRoutingModule,
+    SharedComponentsModule
   ],
-  declarations: [NavigationTabsPage]
+  declarations: [GaleryPage]
 })
-export class NavigationTabsPageModule {}
+export class GaleryPageModule {}

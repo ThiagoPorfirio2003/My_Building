@@ -4,7 +4,7 @@
       <ion-row class="ion-align-items-center">
         @if (this.authService.isLogued) 
         {
-          <ion-col><ion-title>{{this.profile}}</ion-title></ion-col>
+          <ion-col><ion-title>{{this.authService.myUser.userName}}</ion-title></ion-col>
           <ion-col>
             <ion-button (click)="this.signOut()" expand="block" fill="solid" shape="round" class="logOutBtn">
               Salir
@@ -17,15 +17,5 @@
         }
       </ion-row>
     </ion-grid>
-
-    <!-- 
-      <ion-title class="title">{{this.title}}</ion-title>
-      @if(this.authService.isLogued) 
-      {
-        <ion-button class="exit-btn" shape="round" slot="end" (click)="this.signOut()">
-          Cerrar sesion
-        </ion-button>
-      }
-    -->
   </ion-toolbar>
 </ion-header>

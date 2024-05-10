@@ -1,0 +1,26 @@
+<app-header></app-header>
+
+<ion-content>
+  <div class="imgList">
+    @for (numero of this.arrayTest; track $index) 
+    {
+      <div class="dataFrame">
+        <div class="imgFrame">
+          <img src="../../../../assets/icons/mcWindow.jpg">
+        </div>
+    
+        <ion-label>TESTER</ion-label>
+        
+        <div class="metadataFrame">
+          <ion-button expand="block" fill="clear" shape="round">
+            <ion-icon name="thumbs-up-sharp"></ion-icon>
+          </ion-button>
+    
+          <ion-button expand="block" fill="clear" shape="round">
+            <ion-icon name="thumbs-down-sharp"></ion-icon>        
+          </ion-button>
+        </div>
+      </div>
+    }
+  </div>
+</ion-content>

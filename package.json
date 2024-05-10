@@ -31,6 +31,7 @@
     "@capacitor/status-bar": "6.0.0",
     "@ionic/angular": "^8.0.0",
     "@sweetalert2/themes": "^5.0.16",
+    "@swimlane/ngx-charts": "^20.5.0",
     "ionicons": "^7.0.0",
     "rxjs": "~7.8.0",
     "sweetalert2": "^11.10.8",

@@ -1,0 +1,29 @@
+ion-content{
+    margin-top: 0px;
+    padding: 0px;
+    --offset-top: 0px
+}
+
+ion-button{
+    height: 50%;
+    margin: 0px
+}
+
+img{
+    max-width: 80%;
+}
+
+ion-label{
+    font-size: 24px;
+    color: #000;
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+

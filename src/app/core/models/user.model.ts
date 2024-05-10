@@ -5,7 +5,8 @@ export interface MyUser
     uid: string,
     email : string,
     profile : enumProfile,
-    sex : enumSex
+    sex : enumSex,
+    userName : string;
 }
 
 export interface MyUserAccessData

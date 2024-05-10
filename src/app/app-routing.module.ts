@@ -23,7 +23,7 @@ const routes: Routes = [
   {
     path: 'navigation-tabs',
     loadChildren: () => import('./features/navigation-tabs/navigation-tabs.module').then( m => m.NavigationTabsPageModule)
-  },
+  }
 ];
 
 @NgModule({

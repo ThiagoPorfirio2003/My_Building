@@ -4,18 +4,21 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { NavigationTabsPageRoutingModule } from './navigation-tabs-routing.module';
+import { StatisticsPageRoutingModule } from './statistics-routing.module';
 
-import { NavigationTabsPage } from './navigation-tabs.page';
+import { StatisticsPage } from './statistics.page';
 import { SharedComponentsModule } from 'src/app/core/sharedComponents/shared-components.module';
+import { StatisticsModule } from '../statistics.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    NavigationTabsPageRoutingModule  
+    StatisticsPageRoutingModule,
+    SharedComponentsModule,
+    StatisticsModule
   ],
-  declarations: [NavigationTabsPage]
+  declarations: [StatisticsPage]
 })
-export class NavigationTabsPageModule {}
+export class StatisticsPageModule {}

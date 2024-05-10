@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/features/auth/services/auth.service';
 import { UtilsService } from '../../services/utils.service';
-import { TranslateEnums } from '../../enums/userProperties';
 import { addIcons } from 'ionicons';
 import { logOut } from 'ionicons/icons';
 
@@ -12,17 +11,11 @@ import { logOut } from 'ionicons/icons';
 })
 export class HeaderComponent
 {
-  @Input() title! : string;
-  public profile! : string;
-
+  @Input() title! : string
+  
   constructor(public authService : AuthService, private utilsService : UtilsService) 
   {
     addIcons({logOut})
-
-    if(authService.isLogued)
-    {
-      this.profile = TranslateEnums.transalteProfile(this.authService.myUser.profile)
-    }
   }
 
   public signOut()

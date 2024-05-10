@@ -1,0 +1,64 @@
+img{
+    max-width: 100%;
+    max-height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+ion-label{
+    height: 5%;
+    text-align: center;
+}
+
+ion-button{
+    width: 50%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+.imgList{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.dataFrame
+{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-width: 3%;
+    border: solid;
+    border-color: black;
+}
+
+.imgFrame{
+    height: 85%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.metadataFrame
+{
+    width: 100%;
+    height: 10%;
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    padding: 0px;
+}
+
+.buttonFrame
+{
+    width: 100%;
+}
