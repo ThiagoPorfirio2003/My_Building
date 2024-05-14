@@ -1,0 +1,19 @@
+<app-header></app-header>
+
+<ion-content>
+  @if(this.showBeautyUglyMenu)
+  {
+    <app-pretty-ugly-menu (chooseBeautyEventEmiter)="this.chooseBeauty($event)"></app-pretty-ugly-menu>
+  }
+  @else {
+    <ion-fab vertical="top" horizontal="start" slot="fixed">
+      <ion-fab-button (click)="this.showBeautyUglyMenu = true">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+
+    <app-actions-menu [isPretty]="this.prettyUglyService.IsPretty" 
+    (savePhotoEventEmitter)="this.savePhoto($event)"
+    (changeRouteEventEmitter)="this.changeRoute($event)"></app-actions-menu>
+  }
+</ion-content>

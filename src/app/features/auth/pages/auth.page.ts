@@ -3,9 +3,10 @@ import { SplashScreenModule } from '../../../features/splashScreen/modules/splas
 import { MyUser, MyUserAccessData } from 'src/app/core/models/user.model';
 import { UtilsService } from 'src/app/core/services/utils.service';
 import { AuthService } from '../services/auth.service';
-import { DatabaseService } from '../../data/database.service';
+import { DatabaseService } from '../../../core/services/database.service';
 import { MyForm } from 'src/app/core/models/form.model';
 import { MyStatus } from 'src/app/core/models/status.model';
+import { CollectionNames } from 'src/app/core/enums/collectionNames';
 
 
 @Component({
@@ -52,13 +53,15 @@ export class AuthPage{
       {
         const userCredential = await this.authService.logIn(userAccessData.data);
 
-        const doc = await this.databaseService.getDocRef('users', userCredential.user.uid);
+        const doc = await this.databaseService.getDocRef(CollectionNames.USER, userCredential.user.uid);
 
         if(doc.exists())
         {
           loginStatus.success = true;
           this.authService.logMyUser(doc.data() as MyUser);
-          this.utilsServices.changeRoute('/navigation-tabs');
+
+          
+          this.utilsServices.changeRoute('/principal-menu');
         }
       }
       catch(error : any)

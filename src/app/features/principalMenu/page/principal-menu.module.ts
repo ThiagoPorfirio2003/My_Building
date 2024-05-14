@@ -4,9 +4,10 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { TakePhotoTabPageRoutingModule } from './take-photo-tab-routing.module';
+import { PrincipalMenuPageRoutingModule } from './principal-menu-routing.module';
 
-import { TakePhotoTabPage } from './take-photo-tab.page';
+import { PrincipalMenuPage } from './principal-menu.page';
+import { PrincipalMenuModule } from '../principal-menu.module';
 import { SharedComponentsModule } from 'src/app/core/sharedComponents/shared-components.module';
 
 @NgModule({
@@ -14,9 +15,10 @@ import { SharedComponentsModule } from 'src/app/core/sharedComponents/shared-com
     CommonModule,
     FormsModule,
     IonicModule,
-    TakePhotoTabPageRoutingModule,
+    PrincipalMenuPageRoutingModule,
+    PrincipalMenuModule,
     SharedComponentsModule
   ],
-  declarations: [TakePhotoTabPage]
+  declarations: [PrincipalMenuPage]
 })
-export class TakePhotoTabPageModule {}
+export class PrincipalMenuPageModule {}

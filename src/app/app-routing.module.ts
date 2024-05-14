@@ -16,13 +16,21 @@ const routes: Routes = [
     canActivate: [canGoSplashGuard]
   },
   {
+    path: 'principal-menu',
+    loadChildren: () => import('./features/principalMenu/page/principal-menu.module').then( m => m.PrincipalMenuPageModule)
+  },
+  {
+    path: 'galery',
+    loadChildren: () => import('./features/galery/pages/galery.module').then( m => m.GaleryPageModule)
+  },
+  {
+    path: 'statistics',
+    loadChildren: () => import('./features/statistics/pages/statistics.module').then( m => m.StatisticsPageModule)
+  },
+  {
     path: '',
     redirectTo: 'splashScreen',
     pathMatch: 'full'
-  },
-  {
-    path: 'navigation-tabs',
-    loadChildren: () => import('./features/navigation-tabs/navigation-tabs.module').then( m => m.NavigationTabsPageModule)
   }
 ];
 

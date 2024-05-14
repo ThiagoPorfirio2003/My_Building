@@ -1,26 +1,35 @@
 <app-header></app-header>
 
 <ion-content>
+  <ion-fab vertical="top" horizontal="start" slot="fixed">
+    <ion-fab-button (click)="this.utilsService.changeRoute('/principal-menu')">
+      <ion-icon name="arrow-back"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
   <div class="imgList">
-    @for (numero of this.arrayTest; track $index) 
+    
+    @for (photo of this.photos; track photo.id) 
     {
       <div class="dataFrame">
         <div class="imgFrame">
-          <img src="../../../../assets/icons/mcWindow.jpg">
+          <img [src]="photo.url">
         </div>
-    
-        <ion-label>TESTER</ion-label>
-        
-        <div class="metadataFrame">
-          <ion-button expand="block" fill="clear" shape="round">
-            <ion-icon name="thumbs-up-sharp"></ion-icon>
+          
+        <ion-label>{{photo.ownerUserName}}</ion-label>
+
+
+        <ion-button (click)="this.darLike(photo)" [color]="this.prettyUglyService.IsPretty ? 'success' : 'danger'" [disabled]="photo.currentUserLike">
+          <ion-icon name='thumbs-up-sharp'></ion-icon>
+        </ion-button>
+
+        <!-- 
+          <ion-button (click)="this.darLike(photo)" [color]="this.prettyUglyService.IsPretty ? 'success' : 'danger'" [disabled]="photo.currentUserLike">
+            <ion-icon [name]="this.prettyUglyService.IsPretty ? 'thumbs-up-sharp' : 'thumbs-down-sharp'"></ion-icon>
           </ion-button>
-    
-          <ion-button expand="block" fill="clear" shape="round">
-            <ion-icon name="thumbs-down-sharp"></ion-icon>        
-          </ion-button>
-        </div>
+        -->
       </div>
     }
   </div>
+
 </ion-content>

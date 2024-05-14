@@ -1,0 +1,22 @@
+<div class="full-screen">
+    <div class="frame" [style.background]="this.isPretty? '#2dd55b' : '#eb445a'">
+        <img [src]="this.isPretty ? '../../../../../assets/icons/goodThings.png' : 
+        '../../../../../assets/icons/badThings.png'">
+        <ion-label>{{this.isPretty? 'Cosas lindas' : 'Cosas feas'}}</ion-label>
+    </div>
+
+
+    <div class="btn-group">
+        <ion-button (click)="this.takePicture()" expand="block" [color]="this.isPretty ? 'success' : 'danger'">
+            <ion-label>Sacar foto</ion-label>
+        </ion-button>
+
+        <ion-button (click)="this.changeRoute('/galery')" expand="block" [color]="this.isPretty ? 'success' : 'danger'">
+            <ion-label>Galeria</ion-label>
+        </ion-button>
+
+        <ion-button expand="block" [color]="this.isPretty ? 'success' : 'danger'">
+            <ion-label>Estadísticas</ion-label>
+        </ion-button>
+    </div>
+</div>
