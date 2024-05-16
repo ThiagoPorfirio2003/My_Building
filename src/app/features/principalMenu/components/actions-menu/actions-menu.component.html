@@ -15,7 +15,7 @@
             <ion-label>Galeria</ion-label>
         </ion-button>
 
-        <ion-button expand="block" [color]="this.isPretty ? 'success' : 'danger'">
+        <ion-button (click)="this.changeRoute('/statistics')" expand="block" [color]="this.isPretty ? 'success' : 'danger'">
             <ion-label>Estadísticas</ion-label>
         </ion-button>
     </div>

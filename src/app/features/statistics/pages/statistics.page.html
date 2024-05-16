@@ -1,9 +1,23 @@
 <app-header></app-header>
 
 <ion-content>
-  <div class="screen">
-    <app-bar-chart [view]="this.view"></app-bar-chart>
+  <ion-fab vertical="top" horizontal="start" slot="fixed">
+    <ion-fab-button (click)="this.utilsService.changeRoute('/principal-menu')">
+      <ion-icon name="arrow-back"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 
-    <app-pie-chart [view]="this.view"></app-pie-chart>
+  <div class="screen">
+    @if(this.showGraph)
+    {
+      @if(this.prettyUglyService.IsPretty)
+      {
+        <app-pie-chart [prettyPhotos]="this.photosDataToShow" [view]="this.view"></app-pie-chart>
+      }
+      @else {
+        <app-bar-chart [uglyPhotos]="this.photosDataToShow" [view]="this.view"></app-bar-chart>
+      }
+    }
+
   </div>
 </ion-content>

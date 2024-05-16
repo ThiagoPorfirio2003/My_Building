@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Auth, signInWithEmailAndPassword, signOut } from '@angular/fire/auth';
+import { Auth, signInWithEmailAndPassword, signOut, User } from '@angular/fire/auth';
 import { MyUser, MyUserAccessData } from 'src/app/core/models/user.model';
 
 
@@ -19,6 +19,7 @@ export class AuthService {
    {
      this.myUser = userLoged;
      this.isLogued = true;
+
    }
  
    
@@ -36,5 +37,11 @@ export class AuthService {
      this.isLogued = false;
      //this.myUser = {} as UserModel;
      return signOut(this.auth);
+   }
+
+   public changeCurrentUser(authUser : User, myUser : MyUser)
+   {
+    this.auth.updateCurrentUser(authUser);
+    this.myUser = myUser;
    }
 }

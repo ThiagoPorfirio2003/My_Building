@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { BarChartComponent } from './components/bar-chart/bar-chart.component';
 import { PieChartComponent } from './components/pie-chart/pie-chart.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+//import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
   ],
   imports: [
     CommonModule,
-    NgxChartsModule
+    //NgxChartsModule,
+    //CanvasJSAngularChartsModule
   ],
   exports:
   [

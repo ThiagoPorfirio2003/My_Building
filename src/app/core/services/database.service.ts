@@ -1,5 +1,5 @@
 import { Injectable, inject } from '@angular/core';
-import { setDoc, doc, Firestore, getDoc, collection, runTransaction, query, getDocs, limit, where, DocumentReference, orderBy, updateDoc, increment } 
+import { setDoc, doc, Firestore, getDoc, collection, query, getDocs, orderBy, updateDoc, increment, collectionData } 
 from '@angular/fire/firestore';
 import { MyImage } from '../models/myImage.model';
 import { CollectionNames } from '../enums/collectionNames';
@@ -11,6 +11,11 @@ export class DatabaseService {
 
   constructor(private firestore : Firestore) 
   {}
+
+  public getObservable(collectionName : CollectionNames)
+  {
+    return collectionData(collection(this.firestore, collectionName));
+  }
 
   public getCollectionRef(collectionName : CollectionNames)
   {

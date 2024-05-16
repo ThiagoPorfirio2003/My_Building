@@ -21,8 +21,7 @@ export class GaleryPage implements OnInit
   constructor(public authService : AuthService,
     public prettyUglyService : PrettyUglyService,
     public utilsService : UtilsService,
-    private dataBaseService : DatabaseService
-  ) 
+    private dataBaseService : DatabaseService) 
   { 
     this.photos = new Array<MyImage>();
     addIcons({thumbsUpSharp, thumbsDownSharp})

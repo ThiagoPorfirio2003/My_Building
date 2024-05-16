@@ -18,16 +18,9 @@
           
         <ion-label>{{photo.ownerUserName}}</ion-label>
 
-
-        <ion-button (click)="this.darLike(photo)" [color]="this.prettyUglyService.IsPretty ? 'success' : 'danger'" [disabled]="photo.currentUserLike">
+        <ion-button expand="full" (click)="this.darLike(photo)" [color]="this.prettyUglyService.IsPretty ? 'success' : 'danger'" [disabled]="photo.currentUserLike">
           <ion-icon name='thumbs-up-sharp'></ion-icon>
         </ion-button>
-
-        <!-- 
-          <ion-button (click)="this.darLike(photo)" [color]="this.prettyUglyService.IsPretty ? 'success' : 'danger'" [disabled]="photo.currentUserLike">
-            <ion-icon [name]="this.prettyUglyService.IsPretty ? 'thumbs-up-sharp' : 'thumbs-down-sharp'"></ion-icon>
-          </ion-button>
-        -->
       </div>
     }
   </div>
