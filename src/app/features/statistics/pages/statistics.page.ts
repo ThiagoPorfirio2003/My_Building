@@ -39,26 +39,23 @@ export class StatisticsPage implements OnInit, OnDestroy{
     {
       const myPhotos : Array<MyImage> = photos as Array<MyImage>;
 
-      /*
-      const labelRight = {
-  position: 'right'
-} as const;
-      */
       myPhotos.forEach((photo)=>
       {
-        let newPhoto : GraphData = {name: photo.name, value: photo.likes}
-
-        if(!this.prettyUglyService.IsPretty)
+        if(photo.likes != 0)
         {
-          newPhoto.label = {position: 'inside'}
-          if(newPhoto.value == 0)
-          {
-            newPhoto.label = {position: 'right'};
-          }
-        }
+          let newPhoto : GraphData = {name: photo.name, value: photo.likes}
 
-        this.photosDataToShow.push(newPhoto)
-        //this.photosDataToShow.push({name: photo.name, value: photo.likes, label: {position: 'right'}})
+          if(!this.prettyUglyService.IsPretty)
+          {
+            newPhoto.label = {position: 'inside'}
+            if(newPhoto.value < 2)
+            {
+              newPhoto.label = {position: 'right'};
+            }
+          }
+  
+          this.photosDataToShow.push(newPhoto)
+        }
       })
       this.showGraph = true;
     })

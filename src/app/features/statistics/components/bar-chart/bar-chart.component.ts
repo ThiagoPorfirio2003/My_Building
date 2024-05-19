@@ -49,7 +49,7 @@ export class BarChartComponent implements OnChanges{
         axisPointer: {
           type: 'shadow'
         }, 
-        position:['15%', '88%']
+        position:['15%', '90%']
       },
       /*
       legend: {
