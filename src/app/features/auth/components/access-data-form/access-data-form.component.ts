@@ -46,8 +46,10 @@ export class AccessDataFormComponent implements OnChanges
   
   ngOnChanges() : void 
   {
-    this.loginForm.setValue(this.fastUser)
-  }
+    this.loginForm.setValue(this.fastUser);
+    this.emailErrorText = '';
+    this.passwordErrorText = '';
+}
 
   public showHidePassword()
   {
@@ -82,7 +84,7 @@ export class AccessDataFormComponent implements OnChanges
       {
         if(errors.email)
         {
-          this.emailErrorText = 'El email ingresado no es válido';
+          this.emailErrorText = 'El correo ingresado no es válido';
         }
         else
         {

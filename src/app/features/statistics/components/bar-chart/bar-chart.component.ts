@@ -19,7 +19,7 @@ export class BarChartComponent implements OnChanges{
     this.uglyPhotos = new Array<GraphData>();
   }
 
-  ngOnChanges(/*changes: SimpleChanges*/): void 
+  ngOnChanges(): void 
   {
     this.makeGraph()
   }

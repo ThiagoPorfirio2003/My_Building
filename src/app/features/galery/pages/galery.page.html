@@ -23,11 +23,6 @@
           {{photo.originDate.toDate().getMonth()}} / 
           {{photo.originDate.toDate().getFullYear()}}</ion-label>
 
-        <!--
-                  <ion-label>{{photo.originDate.toDate().getDate()}} / {{photo.originDate.toDate().getMonth()}} / {{photo.originDate.toDate().getFullYear()}}</ion-label>
-
-        -->
-        
         <ion-button expand="full" (click)="this.darLike(photo)" [color]="this.prettyUglyService.IsPretty ? 'success' : 'danger'" [disabled]="photo.currentUserLike">
           <ion-icon name='thumbs-up-sharp'></ion-icon>
         </ion-button>
